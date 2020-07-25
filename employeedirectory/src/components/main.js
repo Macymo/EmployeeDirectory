@@ -1,11 +1,25 @@
 import React from "react";
-import DataArea from "./DataArea";
+import DataTable from "./DataTable";
+import SearchBox from "./SearchBox";
+import "../styles/main.css";
+//import json file employees
 
-export default class Main extends Component {
-    render () {
+export default class Main extends React.Component {
+    state = {
+        employees: employees,
+        sorting: "ascending"
+    }
+        searchEmployee = e => {
+
+        }
+        sortName = () => {
+
+        }
+        render () {
         return (
             <>
-             <DataArea />
+             <SearchBox searchEmployee={this.searchEmployee}/>
+             <DataTable sortName={this.sortName} employees={this.state.employees}/>
             </>
         );
     };
