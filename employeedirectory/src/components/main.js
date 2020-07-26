@@ -2,7 +2,7 @@ import React from "react";
 import DataTable from "./DataTable";
 import SearchBox from "./SearchBox";
 import "../styles/main.css";
-//import json file employees
+import employees from "../employees.json";
 
 export default class Main extends React.Component {
     state = {
@@ -10,11 +10,9 @@ export default class Main extends React.Component {
         sorting: "ascending"
     }
         searchEmployee = e => {
-
+            // props.results.map()
         }
-        sortName = () => {
-
-        }
+        
         render () {
         return (
             <>
@@ -23,4 +21,4 @@ export default class Main extends React.Component {
             </>
         );
     };
-};
+}

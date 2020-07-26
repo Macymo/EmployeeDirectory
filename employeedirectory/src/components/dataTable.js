@@ -1,7 +1,11 @@
 import React from "react";
 import "../styles/dataTable.css";
+import employees from "../employees.json";
 
 function DataTable(props){
+    state = {
+        employees: employees
+    };
     return (
         <table>
             <thead>
@@ -13,7 +17,7 @@ function DataTable(props){
                 <th> DOB </th>
             </thead>
             <tbody>
-                {props.employees.map(employee => {
+                {this.state.employees.map(employee => {
                     return (
                         <tr key={employee.id}>
                             <td> {employee.id} </td>
