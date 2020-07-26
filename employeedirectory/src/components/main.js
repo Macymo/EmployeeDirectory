@@ -4,7 +4,7 @@ import SearchBox from "./SearchBox";
 import "../styles/main.css";
 import employees from "../employees.json";
 
-export default class Main extends React.Component {
+class Main extends React.Component {
     state = {
         employees: employees,
         sorting: "ascending"
@@ -22,3 +22,5 @@ export default class Main extends React.Component {
         );
     };
 }
+
+export default Main;
